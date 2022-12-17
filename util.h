@@ -2,4 +2,3 @@
 
 void Open();
 void Add();
-void Total();
