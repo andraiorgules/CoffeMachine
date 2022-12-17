@@ -1,2 +1,2 @@
-# CoffeMachine
-C++ Programming I: Coffe Machine Assignment
+# Coffee Machine
+C++ Programming I: Coffee Machine Assignment
