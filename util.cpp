@@ -1,6 +1,7 @@
 #include "util.h"
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 struct Order
@@ -13,19 +14,21 @@ void Open()
     //open text file
     //save all to a list
 
-    ofstream order;
-    order.open("input.txt");
+    ofstream input;
+    input.open("input.txt");
 
     string amount;
     vector<Order> orders;
 
-      while(order.peek() != EOF)
-      { 
-         orders.push_back(amount);
-      }
-
-      order.close(); 
-     
+    if (input.is_open())
+    {
+        while (input)
+        {
+            getline(input, amount);
+            orders.push_back(amount);
+        }
+    }
+      input.close();  
 }
 
 void Add()
@@ -73,4 +76,6 @@ void Add()
     }
 
     //add all cups and all oz and print totals for the day
+    cout << " We will need a total of" << cups <<"cups of water today! \n";
+    cout << " We will need a total of" << oz <<"oz of coffee grounds today! \n";
 }
