@@ -2,6 +2,8 @@
 
 
 
+vector<Order> orders;
+
 struct Order
 {
     int amount;
@@ -16,7 +18,6 @@ void Open()
     input.open("input.txt");
 
     string amount;
-    vector<Order> orders;
 
     if (input.is_open())
     {
@@ -52,7 +53,7 @@ void Add()
         cups += 3;
         oz += 6;
     }
-    if(find(vec.begin(), vec.end(), 4) != vec.end())
+    if(find(orders.begin(), orders.end(), 4) != orders.end())
     {
         cups += 4;
         oz += 8;
@@ -73,7 +74,7 @@ void Add()
         oz += 14;
     }
 
-    //add all cups and all oz and print totals for the day
+    //print totals for the day
     cout << " We will need a total of" << cups <<"cups of water today! \n";
     cout << " We will need a total of" << oz <<"oz of coffee grounds today! \n";
 }
