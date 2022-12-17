@@ -1,8 +1,6 @@
 #include "util.h"
-#include <iostream>
-#include <fstream>
-#include <string>
-using namespace std;
+
+
 
 struct Order
 {
@@ -34,42 +32,42 @@ void Open()
 void Add()
 {
     //1 coffee = 1 cup of water + 2oz of grounds 
-    //scan list // make node to go through list
+    //scan list 
     //calculate how many cups of water and how many oz of grounds needed for each order
     int oz;
     int cups;
-    
-    if(orders == 1)
+
+    if(find(orders.begin(), orders.end(), 1) != orders.end())
     {
         cups += 1;
         oz += 2;
     }
-    if(orders == 2)
+    if(find(orders.begin(), orders.end(), 2) != orders.end())
     {
         cups += 2;
         oz += 4;
     }
-    if(orders == 3)
+    if(find(orders.begin(), orders.end(), 3) != orders.end())
     {
         cups += 3;
         oz += 6;
     }
-    if(orders == 4)
+    if(find(vec.begin(), vec.end(), 4) != vec.end())
     {
         cups += 4;
         oz += 8;
     }
-    if(orders == 5)
+    if(find(orders.begin(), orders.end(), 5) != orders.end())
     {
         cups += 5;
         oz += 10;
     }
-    if(orders == 6)
+    if(find(orders.begin(), orders.end(), 6) != orders.end())
     {
         cups += 6;
         oz += 12;
     }
-    if(orders == 7)
+    if(find(orders.begin(), orders.end(), 7) != orders.end())
     {
         cups += 7;
         oz += 14;
